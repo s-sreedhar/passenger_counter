@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background-image:"C:\Users\ssree\.vscode\projects\JF-US-ROCKET-MAN-ELON-MUSK-OFF-PLATFORM.webp" ;
+                margin: 20px;
+                text-align: center;
+            }
+            h1{
+                font-size:30px;color:blue
+            }
+            p{
+                font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            }
+            button{
+                color:rgb(23, 182, 23);
+                padding:10px;
+                margin:20px;
+                border:none;
+                border-color: rgb(255, 0, 64);
+
+            }
+           
+            
+            </style>
+            </head>
+            <body>
+                <h1 style="font-family:cursive;">People Entered</h1><br>
+                <h1 id="count-el">0</h2>
+                
+
+                <button onclick="increment()">Increment</button>
+
+                <button onclick="save()">Save</button>
+                <p id="save-el">Previous entries</p><br>
+            
+                <script>
+                    let countEl=document.getElementById("count-el");
+                    let saveEl=document.getElementById("save-el");
+                    let count=0
+                    function increment(){
+                        count += 1
+                        countEl.textContent = count
+
+                    }
+                    function save(){
+                        let countStr=count+"-"
+                        saveEl.textContent += countStr
+                        countEl.textContent = 0
+                        count=0
+                    }
+
+            
+                </script>
+
+
+
+            </body>
+            <html>
