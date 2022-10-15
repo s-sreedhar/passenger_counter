@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dark mode toggle</title>
+    <style>
+        body{
+    background-color:white;
+    font-family:'Times New Roman', Times, serif;
+    color:black;
+
+}
+.darkmode{
+    background-color: rgb(156, 35, 35);
+    color:white;
+}
+
+    </style>
+   
+</head>
+<body>
+    <h1>switch between dark and white modes</h1>
+    <button type="button" onclick="func()">Click here to switch</button>
+<script>
+    function func(){
+        var element=document.body;
+        element.classList.toggle("darkmode");
+       }
+</script>
+</body>
+</html> 
