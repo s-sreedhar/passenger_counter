@@ -1,0 +1,20 @@
+<html>
+    <title>Random Color Generator</title>
+    <body onload="randomcolor()">
+        <h1>Random Color Generator</h1>
+<script>
+    function randomcolor(){
+        let r=Math.floor(Math.random()*256);
+        let g=Math.floor(Math.random()*256);
+        let b=Math.floor(Math.random()*256);
+document.body.style.backgroundColor='rgb('+r+','+g+','+b+')';
+window.setInterval(function(){
+    randomcolor();
+},500);
+
+    }
+    </script>
+
+    </body>
+    </html>
+
