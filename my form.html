@@ -1,0 +1,83 @@
+<html>
+    <title>Form Registration</title>
+    <head>
+        <script type="text/javascript">
+            function validate(){
+                var text="";
+                if(document.myForm.name.value==""){
+                    text="Name cannotbe empty";
+                    document.getElementById("demo").innerHTML=text;
+                    document.myForm.name.focus();
+                    return false;
+                }
+                if(document.myForm.mail.value==""){
+                    text="Mail cannot be empty";
+                    document.getElementById("demo").innerHTML=text;
+                    document.myForm.name.focus();
+                    return false;
+                }
+                var mailid=document.myForm.mail.value;
+                atpos=mailid.indexOf('@');
+                dotpos=mailid.lastIndexof('.');
+                if(atpos<1||(dotpos-atpos)<2){
+                    text="Enter valid mail";
+                    document.getElementById("demo").innerHTML=text;
+                    document.myForm.mail.focus();
+                    return false;
+                }
+                if(document.myForm.phone.value=""||document.myForm.phone.value.length!=10||isNaN(document.myForm.phone.value)){
+                    text="Enter valid name";
+                    document.getElementById("demo").innerHTML = text;
+              document.myForm.phone.focus() ;
+              return false;
+           }
+           if( document.myForm.subject.value == "0" ) {
+              text = "Please provide your area of expertise";
+              document.getElementById("demo").innerHTML = text;
+              return false;
+           }
+           return true;
+        }
+
+
+        </script>
+        </head>
+        <body>
+            <form action="" name="myForm" onsubmit="return(validate())">
+<h1 align="center">USER REGISTRATION</h1>
+<table align="center" cellspacing="3" cellpadding="3" border="3">
+<tr>
+<td align="right" >Name</td>
+<td><input type="text" name="name"/></td>
+
+</tr>
+<tr>
+    <td align="right" >E-Mail</td>
+    <td><input type="text" name="email"/></td>
+    
+    </tr>
+    <tr>
+        <td align="right" >Phone Number</td>
+        <td><input type="text" name="phone"/></td>
+        
+        </tr>
+        <tr>
+            <td align="right" >Subject</td>
+            <td><select name="Subject">
+                <option value="0" selected></option>
+                <option value="1" >HTML</option>
+                <option value="2" >CSS</option>
+                <option value="3" >JS</option>
+                <option value="4" >React</option>
+            </select></td>
+            
+            </tr>
+            
+
+
+</table>
+<p id="demo" style="color:rgb(21, 0, 255); text-align:center"></p>
+<div style="text-align:center" ><input type="submit" value="submit" /></div>
+</form>
+        </body>
+        </html>
