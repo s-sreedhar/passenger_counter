@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kanye West Quote</title>
+</head>
+<body>
+//button tag
+ <button onclick='getQuote()'>Get Quote</button>
+ <div id='quodiv'/>
+ <script>
+ const divcon=document.getElementById("quodiv");
+ //API call and DOM manipulation
+ function getQuote(){
+ fetch("https://api.kanye.rest").then(response=>response.json()).then(data=>(divcon.innerHTML=data.quote));
+ }
+ </script>
+</body>
+</html>
