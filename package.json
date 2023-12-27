@@ -1,0 +1,16 @@
+{
+  "name": "images",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.mjs"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^3.0.2",
+    "sharp": "^0.31.3"
+  },
+  "description": ""
+}
